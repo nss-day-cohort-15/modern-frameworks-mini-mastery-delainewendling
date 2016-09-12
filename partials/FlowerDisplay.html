@@ -1,0 +1,16 @@
+<div class="container">
+  <div ng-repeat="flower in flowers | orderBy: 'category'">
+  <!-- Need to find a way to do this when the number of items in a category are not uniform or known -->
+    <div class="col-xs-12" ng-if='$index % 3 === 0'>
+    <h1>{{flower.category}} </h1></div>
+    <div class="clearfix" ng-if="$index % 3 == 0"></div>
+      <div class="col-xs-4">
+        <div>
+            <h3> {{flower.title}} </h3>
+            <h5> Category: {{flower.category}}</h5>
+            <p> {{flower.description}} </p>
+            <p> ${{flower.price}} </p>
+        </div>
+      </div>
+    </div>
+  </div>
